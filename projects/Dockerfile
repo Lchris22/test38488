@@ -1,4 +1,5 @@
-FROM ubuntu
+FROM node:alpine
 MAINTAINER Lenin Fernandes <leninfernandes81@gmail.com>
-RUN apt-get update
-CMD ["echo" , "Hello"]
+COPY . /app
+WORKDIR /app
+CMD node app.js
